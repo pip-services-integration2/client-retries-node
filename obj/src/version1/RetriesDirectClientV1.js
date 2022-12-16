@@ -21,14 +21,13 @@ class RetriesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'retries.add_retry');
             try {
-                return yield this._controller.addRetry(correlationId, group, id, timeToLive);
+                let res = yield this._controller.addRetry(correlationId, group, id, timeToLive);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -36,14 +35,13 @@ class RetriesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'retries.add_retries');
             try {
-                return yield this._controller.addRetries(correlationId, group, ids, timeToLive);
+                let res = yield this._controller.addRetries(correlationId, group, ids, timeToLive);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -51,14 +49,13 @@ class RetriesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'retries.get_retry_by_id');
             try {
-                return yield this._controller.getRetryById(correlationId, group, id);
+                let res = yield this._controller.getRetryById(correlationId, group, id);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -66,14 +63,13 @@ class RetriesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'retries.get_retry_by_ids');
             try {
-                return yield this._controller.getRetryByIds(correlationId, group, ids);
+                let res = yield this._controller.getRetryByIds(correlationId, group, ids);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -81,14 +77,13 @@ class RetriesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'retries.delete_retry');
             try {
-                return yield this._controller.deleteRetry(correlationId, group, id);
+                let res = yield this._controller.deleteRetry(correlationId, group, id);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -96,14 +91,13 @@ class RetriesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'retries.get_groups_names');
             try {
-                return yield this._controller.getGroupNames(correlationId);
+                let res = yield this._controller.getGroupNames(correlationId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -111,14 +105,13 @@ class RetriesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'retries.get_retries');
             try {
-                return yield this._controller.getRetries(correlationId, filter, paging);
+                let res = yield this._controller.getRetries(correlationId, filter, paging);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }

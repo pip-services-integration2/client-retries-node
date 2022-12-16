@@ -18,12 +18,12 @@ export class RetriesDirectClientV1 extends DirectClient<any> implements IRetries
         let timing = this.instrument(correlationId, 'retries.add_retry');
 
         try {
-            return await this._controller.addRetry(correlationId, group, id, timeToLive);
+            let res = await this._controller.addRetry(correlationId, group, id, timeToLive);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -31,12 +31,12 @@ export class RetriesDirectClientV1 extends DirectClient<any> implements IRetries
         let timing = this.instrument(correlationId, 'retries.add_retries');
 
         try {
-            return await this._controller.addRetries(correlationId, group, ids, timeToLive);
+            let res = await this._controller.addRetries(correlationId, group, ids, timeToLive);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -44,12 +44,12 @@ export class RetriesDirectClientV1 extends DirectClient<any> implements IRetries
         let timing = this.instrument(correlationId, 'retries.get_retry_by_id');
         
         try {
-            return await this._controller.getRetryById(correlationId, group, id);
+            let res = await this._controller.getRetryById(correlationId, group, id);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -57,12 +57,12 @@ export class RetriesDirectClientV1 extends DirectClient<any> implements IRetries
         let timing = this.instrument(correlationId, 'retries.get_retry_by_ids');
         
         try {
-            return await this._controller.getRetryByIds(correlationId, group, ids);
+            let res = await this._controller.getRetryByIds(correlationId, group, ids);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -70,12 +70,12 @@ export class RetriesDirectClientV1 extends DirectClient<any> implements IRetries
         let timing = this.instrument(correlationId, 'retries.delete_retry');
         
         try {
-            return await this._controller.deleteRetry(correlationId, group, id);
+            let res = await this._controller.deleteRetry(correlationId, group, id);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -83,12 +83,12 @@ export class RetriesDirectClientV1 extends DirectClient<any> implements IRetries
         let timing = this.instrument(correlationId, 'retries.get_groups_names');
         
         try {
-            return await this._controller.getGroupNames(correlationId);
+            let res = await this._controller.getGroupNames(correlationId);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -96,12 +96,12 @@ export class RetriesDirectClientV1 extends DirectClient<any> implements IRetries
         let timing = this.instrument(correlationId, 'retries.get_retries');
         
         try {
-            return await this._controller.getRetries(correlationId, filter, paging);
+            let res = await this._controller.getRetries(correlationId, filter, paging);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 }
