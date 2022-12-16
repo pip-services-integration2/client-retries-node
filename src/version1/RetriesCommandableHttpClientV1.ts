@@ -6,7 +6,7 @@ import { CommandableHttpClient } from 'pip-services3-rpc-nodex';
 import { IRetriesClientV1 } from "./IRetriesClientV1";
 import { RetryV1 } from "./RetryV1";
 
-export class RetriesHttpClientV1 extends CommandableHttpClient implements IRetriesClientV1 {
+export class RetriesCommandableHttpClientV1 extends CommandableHttpClient implements IRetriesClientV1 {
 
     public constructor() {
         super('v1/retries');

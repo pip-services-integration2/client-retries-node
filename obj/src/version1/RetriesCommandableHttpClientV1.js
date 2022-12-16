@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RetriesHttpClientV1 = void 0;
+exports.RetriesCommandableHttpClientV1 = void 0;
 const pip_services3_rpc_nodex_1 = require("pip-services3-rpc-nodex");
-class RetriesHttpClientV1 extends pip_services3_rpc_nodex_1.CommandableHttpClient {
+class RetriesCommandableHttpClientV1 extends pip_services3_rpc_nodex_1.CommandableHttpClient {
     constructor() {
         super('v1/retries');
     }
@@ -141,5 +141,5 @@ class RetriesHttpClientV1 extends pip_services3_rpc_nodex_1.CommandableHttpClien
         });
     }
 }
-exports.RetriesHttpClientV1 = RetriesHttpClientV1;
-//# sourceMappingURL=RetriesHttpClientV1.js.map
+exports.RetriesCommandableHttpClientV1 = RetriesCommandableHttpClientV1;
+//# sourceMappingURL=RetriesCommandableHttpClientV1.js.map

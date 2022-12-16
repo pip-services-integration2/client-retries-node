@@ -4,7 +4,7 @@ import { DataPage } from "pip-services3-commons-nodex";
 import { CommandableHttpClient } from 'pip-services3-rpc-nodex';
 import { IRetriesClientV1 } from "./IRetriesClientV1";
 import { RetryV1 } from "./RetryV1";
-export declare class RetriesHttpClientV1 extends CommandableHttpClient implements IRetriesClientV1 {
+export declare class RetriesCommandableHttpClientV1 extends CommandableHttpClient implements IRetriesClientV1 {
     constructor();
     addRetry(correlationId: string, group: string, id: string, timeToLive: number): Promise<RetryV1>;
     addRetries(correlationId: string, group: string, ids: string[], timeToLive: number): Promise<RetryV1[]>;

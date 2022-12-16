@@ -4,7 +4,7 @@ export declare class RetriesClientsFactory extends Factory {
     static Descriptor: Descriptor;
     static DirectClientDescriptor: Descriptor;
     static MemoryClientDescriptor: Descriptor;
-    static HttpClientDescriptor: Descriptor;
+    static CmdHttpClientDescriptor: Descriptor;
     static NullClientDescriptor: Descriptor;
     constructor();
 }
