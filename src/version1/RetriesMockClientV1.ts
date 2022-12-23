@@ -6,7 +6,7 @@ import { DataPage } from "pip-services3-commons-nodex";
 import { IRetriesClientV1 } from "./IRetriesClientV1";
 import { RetryV1 } from "./RetryV1";
 
-export class RetriesMemoryClientV1 implements IRetriesClientV1 {
+export class RetriesMockClientV1 implements IRetriesClientV1 {
     private _maxPageSize: number = 100;
     private _items: RetryV1[];
     private readonly _defaultTTL: number = 7 * 24 * 60 * 60 * 1000;

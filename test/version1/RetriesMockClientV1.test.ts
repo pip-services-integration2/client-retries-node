@@ -1,13 +1,13 @@
-import { RetriesMemoryClientV1 } from '../../src/version1/RetriesMemoryClientV1';
+import { RetriesMockClientV1 } from '../../src/version1/RetriesMockClientV1';
 import { RetriesClientV1Fixture } from './RetriesClientV1Fixture';
 
-suite('RetriesDirectClientV1', () => {
-    let client: RetriesMemoryClientV1;
+suite('RetriesMockClientV1', () => {
+    let client: RetriesMockClientV1;
     let fixture: RetriesClientV1Fixture;
 
     setup(() => {
 
-        client = new RetriesMemoryClientV1();
+        client = new RetriesMockClientV1();
         fixture = new RetriesClientV1Fixture(client);
     });
 
